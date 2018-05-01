@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <ul>
+            {% for c in companies %}
+            <!--{# Each "company" is a Company model object. #}
+            <li> <a href="{{ c.get_absolute_url }}">{{ c }}</a></li>-->
+
+              <div class="col-md-">
+                <div class="row movie-tile">
+                  <div class="col-md-7 tile-info">
+                    <a href="{{ c.get_absolute_url }}"><h4>{{ c }}</h4></a>
+                    <p>Region: {{company.region}}</p>
+                    <p>URL: {{company.url}}</p>
+                  </div>
+                </div>
+              </div>
+
+        {% endfor %}
+        </ul>
+        <div class="pagination">
+            <span class="step-links">
+                {% if contacts.has_previous %}
+                    <a href="?page=1">&laquo; first</a>
+                    <a href="?page={{ companies.previous_page_number }}">previous</a>
+                {% endif %}
+
+                <span class="current">
+                    Page {{ company.number}} of {{ companies.paginator.num_pages }}.
+                </span>
+
+                {% if contacts.has_next %}
+                    <a href="?page={{ companies.next_page_number }}">next</a>
+                    <a href="?page={{ company.paginator.num_pages }}">last &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
+    </body>
+
+</html>>
+{% endblock %}

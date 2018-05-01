@@ -1,0 +1,14 @@
+#map{
+
+   height: 400px;
+   min-width: 800px;
+    align: center;
+}
+
+
+.rainbow div {
+		font: 10px sans-serif;
+		text-align: left;
+		width: 200px;
+		height: 20px;
+	}

@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block breadcrumbs %}
+    <li class="breadcrumb-item active">Home</li>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Company name
+                    </h5>
+                    <p class="card-text">
+                        <a href="{% url "yafinance:company-list" %}">{{ company.count }} Companies</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    <hr>
+    <div class="col-md-6">
+        <span id="details"> </span>
+    </div>
+    <!--
+	This is the container in which D3 will draw the scatter plot.
+	-->
+    <div class="col-md-6">
+        <div class="row">
+          <div id="vis_container"></div>
+        </div>
+    </div>
+
+
+<!--
+	This is for map
+	-->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="map" id="map"> initMap();</div>
+      </div>
+    </div>
+    </div>
+
+
+{% endblock %}
+
+
+
+
+
+

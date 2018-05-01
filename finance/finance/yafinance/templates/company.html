@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<h2>{{ company.name }}</h2>
+</br>
+<h4>Company Details</h4>
+
+<ul>
+    <li>Company Name: {{ company.name }}</li>
+    <li>company finance code: {{ company.cid }}</li>
+    <li>Company region: {{ company.region }}</li>
+    <li>company url: {{ company.url }}</li>
+
+</ul>
+
+<h4>Financial Information</h4>
+
+<ul>
+    <li>Previous Close: {{ company.previous_close }}</li>
+    <li>Open Price: {{ company.cid }}</li>
+    <li>Bid Price: {{ company.bid}}</li>
+    <li>Ask Price: {{ company.ask }}</li>
+    <li>Volume: {{ company.volume }}</li>
+    <li>Average Volume: {{ company.avgvolume}}</li>
+    <li>Market Cap: {{ company.market_cap }}</li>
+    <li>EPS: {{ company.EPS }}</li>
+    <li>Day Range: {{ company.day_min}} - {{ company.day_max }}</li>
+    <li>Week Range: {{ company.week_min}} - {{ company.week_max }}</li>
+
+
+
+</ul>
+{% endblock %}
