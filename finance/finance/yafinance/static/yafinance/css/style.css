@@ -2,7 +2,7 @@
 
    height: 400px;
    min-width: 800px;
-    align: center;
+    margin: auto;
 }
 
 
@@ -12,3 +12,31 @@
 		width: 200px;
 		height: 20px;
 	}
+
+
+  .bar{
+    fill: steelblue;
+  }
+
+  .bar:hover{
+    fill: brown;
+  }
+
+	.axis {
+	  font: 10px sans-serif;
+	}
+
+	.axis path,
+	.axis line {
+	  fill: none;
+	  stroke: #000;
+	  shape-rendering: crispEdges;
+	}
+
+.header,breadcrumb {
+    color:#633be3;
+}
+
+a {
+     color:#633be3;
+}

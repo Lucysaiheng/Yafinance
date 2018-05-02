@@ -7,9 +7,25 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Yafinance</title>
+
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static "yafinance/css/style.css" %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/simple-statistics@4.1.0/dist/simple-statistics.min.js"></script>
+      <script src="https://d3js.org/d3.v4.min.js"></script>
+      <script src="https://d3js.org/d3.v3.min.js"></script>
+      <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+
+    <script src="{% static "yafinance/js/scatter.js" %}"></script>
+    <script src="{% static "yafinance/js/home.js" %}"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBDSW0S5J-kOf7R1sOu3bRoXS7zO18plc&callback=initMap">
+    </script>
+
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -26,7 +42,7 @@
             {% block header %}
                 <div class="row">
                     <div class="col-12">
-                        <a class="header" href="/templates/"><h1>Yafinance</h1></a>
+                        <a class="header" href="167.99.234.202/yafinance"><h1>Yafinance</h1></a>
                     </div>
                 </div>
             {% endblock %}
@@ -43,13 +59,10 @@
     {% endblock %}
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="{% static "yafinance/js/home.js" %}"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBDSW0S5J-kOf7R1sOu3bRoXS7zO18plc&callback=initMap">
-    </script>
-    <script src="{% static "yafinance/js/map.js" %}"></script>
+
+
+
+
 
   </body>
 </html>

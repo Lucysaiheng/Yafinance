@@ -2,24 +2,23 @@
 
 {% block content %}
 <html>
-    <head>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+
     <body>
         <ul>
             {% for c in companies %}
             <!--{# Each "company" is a Company model object. #}
             <li> <a href="{{ c.get_absolute_url }}">{{ c }}</a></li>-->
-
-              <div class="col-md-">
-                <div class="row movie-tile">
-                  <div class="col-md-7 tile-info">
-                    <a href="{{ c.get_absolute_url }}"><h4>{{ c }}</h4></a>
-                    <p>Region: {{company.region}}</p>
-                    <p>URL: {{company.url}}</p>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="row company-tile">
+                  <div class="col-md-5 tile-info">
+                      <li><a href="{{ c.get_absolute_url }}"><h4 style="color:#5c5c5c">{{ c }}</h4></a></li>
+                      <p>Region: {{c.region}}</p>
+                      <p>URL: <a href="{{c.get_absolute_url}}">{{c.url}}</a></p>
                   </div>
                 </div>
               </div>
+            </div>
 
         {% endfor %}
         </ul>
