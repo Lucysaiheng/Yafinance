@@ -4,24 +4,30 @@
 <html>
 
     <body>
-        <ul>
-            {% for c in companies %}
-            <!--{# Each "company" is a Company model object. #}
-            <li> <a href="{{ c.get_absolute_url }}">{{ c }}</a></li>-->
-            <div class="row">
-              <div class="col-md-4">
-                <div class="row company-tile">
-                  <div class="col-md-5 tile-info">
-                      <li><a href="{{ c.get_absolute_url }}"><h4 style="color:#5c5c5c">{{ c }}</h4></a></li>
-                      <p>Region: {{c.region}}</p>
-                      <p>URL: <a href="{{c.get_absolute_url}}">{{c.url}}</a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-        {% endfor %}
-        </ul>
+        <div class="cleartitle">
+            <h2>North Carolina Based Companies</h2>
+        </div>
+  <div class="grid">
+    {% for c in companies %}
+
+
+
+              <article>
+
+                <img src="image/yafinance.jpg" alt="Company Logo">
+                <div class="text">
+
+                   {# Each "company" is a Company model object. #}
+                  <a href="{{ c.get_absolute_url }}"><h4 style="color:#ff8d00">{{ c }}</h4></a>
+                  <h4>Region:{{c.region}}</h4>
+                  <h4>URL: <a class="button-blog" style="font-size: 12px;" href="{{c.get_absolute_url}}">{{c.url}}</a></h4>
+                </div>
+              </article>
+
+
+    {% endfor %}
+  </div>
         <div class="pagination">
             <span class="step-links">
                 {% if contacts.has_previous %}

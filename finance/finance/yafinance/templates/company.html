@@ -4,31 +4,41 @@
 
 <h2 style=" color:#FFA500;">{{ company.name }}</h2>
 </br>
-<h4 style="color:#5c5c5c";>Company Details</h4>
-
-<ul>
-    <li>Company Name: {{ company.name }}</li>
-    <li>company finance code: {{ company.cid }}</li>
-    <li>Company region: {{ company.region }}</li>
-    <li>company url: {{ company.url }}</li>
-
-</ul>
-
-<h4 style="color:#5c5c5c";>Financial Information</h4>
-
-<ul>
-    <li>Previous Close: {{ company.previous_close }}</li>
-    <li>Open Price: {{ company.cid }}</li>
-    <li>Bid Price: {{ company.bid}}</li>
-    <li>Ask Price: {{ company.ask }}</li>
-    <li>Volume: {{ company.volume }}</li>
-    <li>Average Volume: {{ company.avgvolume}}</li>
-    <li>Market Cap: {{ company.market_cap }}</li>
-    <li>EPS: {{ company.EPS }}</li>
-    <li>Day Range: {{ company.day_min}} - {{ company.day_max }}</li>
-    <li>Week Range: {{ company.week_min}} - {{ company.week_max }}</li>
 
 
+<div class="grid">
+    <article>
+        <ul>
+            <h4 style="color:#2F2D80";>Company Details</h4>
+            <h4><li>Company Name: {{ company.name }}</li></h4></br>
+            <h4><li>company finance code: {{ company.cid }}</li></h4></br>
+            <h4><li>Company region: {{ company.region }}</li></h4></br>
+            <h4><li>company url: {{ company.url }}</li></h4></br>
 
-</ul>
+        </ul>
+    </article>
+
+
+ <article>
+    <h4 style="color:#2F2D80";>Financial Information</h4>
+
+     <ul>
+
+            <h4><li>Previous Close: {{ company.previous_close }}</li></h4></br>
+            <h4><li>Open Price: {{ company.cid }}</li></h4></br>
+            <h4><li>Bid Price: {{ company.bid}}</li></h4></br>
+            <h4><li>Ask Price: {{ company.ask }}</li></h4></br>
+            <h4><li>Volume: {{ company.volume }}</li></h4></br>
+            <h4><li>Average Volume: {{ company.avgvolume}}</li></h4></br>
+            <h4><li>Market Cap: {{ company.market_cap }}</li></h4></br>
+            <h4><li>EPS: {{ company.EPS }}</li></h4></br>
+            <h4><li>Day Range: {{ company.day_min}} - {{ company.day_max }}</li></h4></br>
+            <h4><li>Week Range: {{ company.week_min}} - {{ company.week_max }}</li></h4></br>
+
+     </ul>
+ </article>
+
+
+</div>
+
 {% endblock %}

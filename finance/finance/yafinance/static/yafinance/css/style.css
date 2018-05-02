@@ -1,9 +1,79 @@
+h1{
+	font-family: 'Oswald', sans-serif;
+	font-size: 2.5em;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0;
+	margin-bottom: 1.25em;
+	clear:both;
+	text-align: center;
+}
+h2{
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.8em;
+	font-weight: 300;
+
+}
+h2.cleartitle{
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.8em;
+	font-weight: 300;
+    color: white;
+
+}
+
+
+h4{
+
+    color:#5c5c5c
+}
+
+
+li{
+	list-style: none;
+	float: left;
+	font-size: 0.6em;
+	padding-top: 1em;
+    display: inline-block;
+}
+
+
 #map{
 
    height: 400px;
    min-width: 800px;
     margin: auto;
 }
+
+/*style for axis labels*/
+.axis-label {
+	font-family: sans-serif;
+	font-size: 12px;
+}
+
+.cleartitle{
+	text-align: center;
+    border-style: solid;
+    border-radius: 20%;
+    color: #fefefe;
+    background: linear-gradient(to bottom right, #ff3cac, #562b7c, #2b86c5);
+}
+
+
+/* Style information for axis lines and tick marks */
+.axis path,
+.axis line {
+	fill: none;
+	stroke: black;
+	shape-rendering: crispEdges;
+}
+
+.axis text {
+	font-family: sans-serif;
+	font-size: 11px;
+}
+
+/* Style information for bar */
 
 
 .rainbow div {
@@ -39,4 +109,116 @@
 
 a {
      color:#633be3;
+}
+
+/*Card effect####################*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18.75em, 1fr));
+  grid-gap: 1.2em;
+  align-items: center;
+  padding: 3% 3% 3% 3% }
+.grid h4{
+	color:#2F2D80;
+	font-family: 'Lucida Grande', sans-serif;
+}
+.grid > article {
+  border: 0.06em solid #ccc;
+  box-shadow: 0.125em 0.06em 0.375em 0.124em  rgba(0,0,0,0.3);
+}
+.grid > article img {
+  max-width: 100%;
+}
+.text {
+  padding: 0em 1.25em 1.25em;
+}
+.text p{
+	font-family: 'Roboto', sans-serif;
+}
+/*.text > button {
+  background: #3F9472;
+  border: 0;
+  color: white;
+  padding: 0.625em;
+  width: 100%;
+  }*/
+.button-blog{
+	  border: 12px;
+	  color: #1d2124;
+	  padding: 0.42em;
+	  width: 100%;
+      text-decoration-line: underline;
+	}
+.button-blog:hover{
+	background:gray;
+	color:aliceblue;
+	text-decoration: none;
+}
+
+
+/*Media File##########################*/
+
+ @media (min-width: 37.5em) {
+
+	 body{
+		 margin: 0 15%;
+		 padding: 0;
+
+	 }
+
+      .content-flex-container {
+		  flex-direction: row;
+		  padding: 1%;
+
+
+	 }
+
+	 .flex-item{
+		 margin: 1%
+	 }
+
+	 .profile-container{
+		 width:85%;
+		 padding:0;
+	 }
+
+	 h1.bio{
+		 font-size: 1.7em;
+	 }
+	 h2.bio{
+		 font-size: 1.5em;
+	 }
+
+	 h2{
+		 font-size: 1em;
+	 }
+
+
+	 p.discription{
+		 font-size: 1.3em;
+	 }
+	.botton{
+		 font-size: 2.5em;
+	 }
+	 .imgcolums img{
+		 margin-top: 15%;
+
+	 }
+	 img.avatar{
+		 margin-top: 15%;
+	 }
+
+
+}
+@media (min-width:47.5em){
+	h2.bio{
+		font-size: 2.2em;
+	}
+
+	p.bio{
+		font-size: 1.4em
+	}
+	body{
+		padding: 1em 4em;
+	}
 }

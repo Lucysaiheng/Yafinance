@@ -1,9 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block breadcrumbs %}
-    <li class="breadcrumb-item active">Home</li>
-{% endblock %}
 
 {% block content %}
     <div class="row">
@@ -26,19 +23,17 @@
             <select onchange="renderVis(this.options[this.selectedIndex].value);">
                 <option value="cs">All</option>
                 <option value="northwest">Northwest-like companies</option>
-                <option value="southwest">South-like companies</option>
-                <option value="none">Unknown</option>
+                <option value="southwest">Southwest-like companies</option>
+                <option value="north">North</option>
+                <option value="none">None</option>
             </select>
            </h4>
 
             <span id="details">&nbsp;</span>
 <!--This is for my scatter plot suppose to show up-->
-             <div id="vis_container"> Scatter Plot Loading..
-
-            </div>
+             <div id="vis_container"></div>
 <!--This is for my bar chart-->
-             <div id="bar_container"> Bar Chart Loading..
-
+             <div id="fillBar"> Bar Chart Loading..
             </div>
 
 
@@ -53,23 +48,25 @@
 
         <div id="company-bar"></div>
 
-
-
-{% endblock %}
     <script>
-         initVis();
-
+        //console.log("try to render")
+        initVis();
         renderVis("cs")
+        //renderBar();
     </script>
 
 <script src="https://unpkg.com/simple-statistics@4.1.0/dist/simple-statistics.min.js"></script>
-<script src="https://d3js.org/d3.v4.min.js"></script>
 
-<script src = https://raw.githubusercontent.com/Lucysaiheng/Yafinance/master/finance_total.json"></script>
 
-{% block script %}
 
 <script src="{% static "yafinance/js/bar.js" %}"></script>
 <script src="{% static "yafinance/js/scatter.js" %}"></script>
 <script src="{% static "yafinance/js/home.js" %}"></script>
+
 {% endblock %}
+
+
+
+
+
+

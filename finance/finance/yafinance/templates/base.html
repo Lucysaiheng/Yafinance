@@ -12,13 +12,13 @@
 
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static "yafinance/css/style.css" %}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/simple-statistics@4.1.0/dist/simple-statistics.min.js"></script>
       <script src="https://d3js.org/d3.v4.min.js"></script>
-      <script src="https://d3js.org/d3.v3.min.js"></script>
-      <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://unpkg.com/topojson@3"></script>
 
     <script src="{% static "yafinance/js/scatter.js" %}"></script>
@@ -42,14 +42,18 @@
             {% block header %}
                 <div class="row">
                     <div class="col-12">
-                        <a class="header" href="167.99.234.202/yafinance"><h1>Yafinance</h1></a>
+                        <a class="header" href=""><h1>Yafinance</h1></a>
                     </div>
                 </div>
             {% endblock %}
             {% block breadcrumb_nav %}
-                <nav aria-label="breadcrumb">
+                <nav class="w3-bar w3-white"aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         {% block breadcrumbs %}
+                              <a href="" class="w3-bar-item w3-button">Home</a>
+
+                              <a href="/companies/" class="w3-bar-item w3-button">NC Companies</a>
+
                         {% endblock %}
                     </ol>
                 </nav>
